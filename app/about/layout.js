@@ -1,9 +1,24 @@
+import Link from "next/link";
 import React from "react";
+
+export const metadata = {
+  title: "About us",
+  description: "This is a Blog about page.",
+};
 
 function AboutLayout({ children }) {
   return (
     <div>
-      <nav className="my-8">Mission | Vision</nav>
+      <nav>
+        <ul className="flex gap-6">
+          <li>
+            <Link href="/about/mission">Mission</Link>
+          </li>
+          <li>
+            <Link href="/about/vision">Vision</Link>
+          </li>
+        </ul>
+      </nav>
       {children}
     </div>
   );
